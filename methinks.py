@@ -46,29 +46,54 @@ print("Final: " + generated_sentence)
 
 
 
-#EXAMPLE RESULTS
+#EXAMPLE RESULTS (run as 'time python methinks.py' in Linux or UNIX to get execution time)
 
-# Number of iterations: 115
-# Initial: MESJAOQRGKVRZUVCUQKRQIWAPGKC
+# Number of iterations: 144
+# Initial: H BOCBBZIR GVEURBORTAVNUV FL
 # Final: METHINKS IT IS LIKE A WEASEL
 
-# Number of iterations: 120
-# Initial: NLMGQTVLYJBPH SQESJYJNW OOEI
+# real	0m0.133s
+# user	0m0.040s
+# sys	0m0.042s
+
+
+
+# Number of iterations: 78
+# Initial: EOWXJVGQCTCDDHOLZDWRAFCEUQPV
 # Final: METHINKS IT IS LIKE A WEASEL
 
-# Number of iterations: 166
-# Initial:  GTZOQPOEHUVPCQMCNZZISNWVWKR
+# real	0m0.048s
+# user	0m0.026s
+# sys	0m0.017s
+
+
+
+# Number of iterations: 97
+# Initial: OQIPSFCXXGORNEATRVL NEGR OHR
 # Final: METHINKS IT IS LIKE A WEASEL
 
-# Number of iterations: 128
-# Initial: UTAZGOGBOXABY GPMKZLBAPSFDKN
+# real	0m0.055s
+# user	0m0.031s
+# sys	0m0.019s
+
+
+
+# Number of iterations: 106
+# Initial: EUOFQAIPOIDAJPEIFIMCTOIFGCCW
 # Final: METHINKS IT IS LIKE A WEASEL
 
-# Number of iterations: 86
-# Initial: MBPLSK GBKMKPLSAMEHUUHJPUVKC
+# real	0m0.049s
+# user	0m0.027s
+# sys	0m0.017s
+
+
+
+# Number of iterations: 108
+# Initial: QPYPXZCSHXNQO KHW XOEDUMWEUB
 # Final: METHINKS IT IS LIKE A WEASEL
 
-
-
+# real	0m0.049s
+# user	0m0.027s
+# sys	0m0.017s
 
 
