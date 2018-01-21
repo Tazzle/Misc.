@@ -3,15 +3,14 @@ import random
 methinks_weasel = "METHINKS IT IS LIKE A WEASEL"
 possible_letters = ['A', 'B', 'C', 'D','E', 'F', 'G', 'H', 'I', 'J','K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ']
 
-initial_generated_sentence = ''
-generated_sentence = ''
-for x in range (0,28):
-	generated_sentence += random.choice(possible_letters)
-	#used for comparison at end
-	initial_generated_sentence = generated_sentence
+def generate_sentence():
+	result = ''
+	for x in range (0,28):
+		result += random.choice(possible_letters)
+	return result
+	
 
-
-def generate(matched_letters, generated_sentence):
+def mutate_sentence(matched_letters, generated_sentence):
 	result = generated_sentence
 	index_to_skip = matched_letters
 	for index in range(0, 28):
@@ -22,27 +21,35 @@ def generate(matched_letters, generated_sentence):
 			print result
 			print ''
 	return result
-		
 
-iteration_count = 0
-matched_letters = []
-while len(matched_letters) < 28:
-	iteration_count += 1
-	list_of_tuples = zip(methinks_weasel, generated_sentence)
-	for index, (x, y) in enumerate(list_of_tuples):
-		if x == y and index not in matched_letters:
-			matched_letters.append(index)
-	if(len(matched_letters)) > 0:
-		generated_sentence = generate(matched_letters, generated_sentence)
-	else:
-		print ""
-		print "No matches in generated sentence, try again!"
-		break
+
+def main(generated_sentence):
+	iteration_count = 0
+	matched_letters = []
+	while len(matched_letters) < 28:
+		iteration_count += 1
+		list_of_tuples = zip(methinks_weasel, generated_sentence)
+		for index, (x, y) in enumerate(list_of_tuples):
+			if x == y and index not in matched_letters:
+				matched_letters.append(index)
+		if(len(matched_letters)) > 0:
+			generated_sentence = mutate_sentence(matched_letters, generated_sentence)
+		else:
+			print ""
+			print "No matches in generated sentence, try again!"			
+	return generated_sentence, iteration_count
+
+
+generated_sentence = generate_sentence()
+initial_generated_sentence = generated_sentence
+final_sentence, iteration_count = main(generated_sentence)
+
 
 print ''
 print("Number of iterations: " + str(iteration_count))
 print("Initial: " + initial_generated_sentence)
-print("Final: " + generated_sentence)
+print("Final: " + final_sentence)
+
 
 
 
